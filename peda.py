@@ -4,7 +4,7 @@
 #
 #       License: see LICENSE file for details
 #
-
+# -*- coding: utf-8 -*-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -5007,9 +5007,9 @@ class PEDACmd(object):
                         if idx <= pc_idx:
                             text += line + "\n"
                         else:
-                            text += " │ %s\n" % line.strip()
+                            text += " | %s\n" % line.strip()
                     text = format_disasm_code(text, pc) + "\n"
-                    text += " └─>"
+                    text += " |->"
                     code = peda.get_disasm(jumpto, count//2)
                     if not code:
                         code = "   Cannot evaluate jump destination\n"
@@ -5045,9 +5045,9 @@ class PEDACmd(object):
                         if idx <= pc_idx:
                             text += line + "\n"
                         else:
-                            text += " │ %s\n" % line.strip()
+                            text += " | %s\n" % line.strip()
                     text = format_disasm_code(text, pc) + "\n"
-                    text += " └─>"
+                    text += " |->"
                     code = peda.get_disasm(jumpto, count//2)
                     if not code:
                         code = "   Cannot evaluate jump destination\n"

@@ -259,7 +259,7 @@ def separator(title = ""):
         _height, width = struct.unpack('hh', fcntl.ioctl(sys.stdin.fileno(), termios.TIOCGWINSZ, '1234'))
     except:
         width = 78
-    return title.center(width, "─")
+    return title.center(width, "-")
 
 def pager(text, pagesize=None):
     """
